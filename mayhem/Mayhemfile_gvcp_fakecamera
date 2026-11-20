@@ -1,0 +1,11 @@
+project: savantenvs/aravis
+target: gvcp_fakecamera
+
+cmds:
+  - cmd: /mayhem/fuzz_gvcp_fakecamera
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gvcp_fakecamera/testsuite
